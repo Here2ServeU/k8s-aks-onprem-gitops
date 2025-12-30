@@ -1,0 +1,6 @@
+# Minimal Kyverno install for demo environments.
+# Prefer Helm in production.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kyverno

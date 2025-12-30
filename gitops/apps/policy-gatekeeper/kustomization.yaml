@@ -1,0 +1,4 @@
+resources:
+  - install.yaml
+  - constrainttemplate-requiredlabels.yaml
+  - constraint-requiredlabels.yaml

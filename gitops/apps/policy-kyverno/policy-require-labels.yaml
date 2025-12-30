@@ -1,0 +1,18 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-owner-label
+spec:
+  validationFailureAction: Enforce
+  rules:
+    - name: check-owner-label
+      match:
+        resources:
+          kinds:
+            - Pod
+      validate:
+        message: "All Pods must set label 'owner'."
+        pattern:
+          metadata:
+            labels:
+              owner: "?*"

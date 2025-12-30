@@ -1,0 +1,6 @@
+# Argo CD install manifest (pinned) - use official quickstart URL in real deployments.
+# For interviews, this is kept minimal.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd
