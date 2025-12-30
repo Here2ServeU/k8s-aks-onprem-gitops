@@ -4,7 +4,7 @@ metadata:
   name: sample-web
 spec:
   selector:
-    app: sample-web
+    app: emmanuel-web
   ports:
     - port: 80
       targetPort: 80
