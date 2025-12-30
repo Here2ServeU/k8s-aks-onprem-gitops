@@ -1,15 +1,15 @@
-trigger:
-- main
+# trigger:
+# - main
 
-pool:
-  vmImage: ubuntu-latest
+# pool:
+#   vmImage: ubuntu-latest
 
-steps:
-- checkout: self
-- script: |
-    terraform fmt -check -recursive infra/terraform
-  displayName: Terraform fmt
-- script: |
-    sudo apt-get update && sudo apt-get install -y kustomize
-    kustomize build gitops/apps > rendered.yaml
-  displayName: Kustomize build
+# steps:
+# - checkout: self
+# - script: |
+#     terraform fmt -check -recursive infra/terraform
+#   displayName: Terraform fmt
+# - script: |
+#     sudo apt-get update && sudo apt-get install -y kustomize
+#     kustomize build gitops/apps > rendered.yaml
+#   displayName: Kustomize build
